@@ -1,0 +1,231 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Cloud Datastore API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://accounts.google.com/o/oauth2/v2/auth",
+      "accessTokenUrl": "https://oauth2.googleapis.com/token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Allocate IDs",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://datastore.googleapis.com/v1/projects/:projectId:allocateIds",
+        "params": [
+          {
+            "name": "projectId",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Allocates IDs for the given keys, which is useful for referencing an entity before it is inserted."
+    },
+    {
+      "info": {
+        "name": "Begin transaction",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://datastore.googleapis.com/v1/projects/:projectId:beginTransaction",
+        "params": [
+          {
+            "name": "projectId",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Begin transaction"
+    },
+    {
+      "info": {
+        "name": "Commit transaction",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://datastore.googleapis.com/v1/projects/:projectId:commit",
+        "params": [
+          {
+            "name": "projectId",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Commits a transaction, optionally creating, deleting or modifying some entities."
+    },
+    {
+      "info": {
+        "name": "Lookup entities",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://datastore.googleapis.com/v1/projects/:projectId:lookup",
+        "params": [
+          {
+            "name": "projectId",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Lookup entities"
+    },
+    {
+      "info": {
+        "name": "Reserve IDs",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://datastore.googleapis.com/v1/projects/:projectId:reserveIds",
+        "params": [
+          {
+            "name": "projectId",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Reserve IDs"
+    },
+    {
+      "info": {
+        "name": "Rollback transaction",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://datastore.googleapis.com/v1/projects/:projectId:rollback",
+        "params": [
+          {
+            "name": "projectId",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Rollback transaction"
+    },
+    {
+      "info": {
+        "name": "Run query",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://datastore.googleapis.com/v1/projects/:projectId:runQuery",
+        "params": [
+          {
+            "name": "projectId",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Run query"
+    },
+    {
+      "info": {
+        "name": "Run aggregation query",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://datastore.googleapis.com/v1/projects/:projectId:runAggregationQuery",
+        "params": [
+          {
+            "name": "projectId",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Run aggregation query"
+    },
+    {
+      "info": {
+        "name": "List operations",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://datastore.googleapis.com/v1/projects/:projectId/operations",
+        "params": [
+          {
+            "name": "projectId",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "filter",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "pageSize",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "pageToken",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "List operations"
+    }
+  ],
+  "bundled": true
+}
