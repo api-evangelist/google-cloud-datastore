@@ -79,7 +79,7 @@ common:
     url: https://cloud.google.com/datastore/docs
   - type: Pricing
     url: https://cloud.google.com/datastore/pricing
-  - type: SignUp
+  - type: Signup
     url: https://console.cloud.google.com/freetrial
   - type: Console
     url: https://console.cloud.google.com/datastore
