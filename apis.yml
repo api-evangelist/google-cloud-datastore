@@ -71,6 +71,12 @@ apis:
         url: https://datastore.googleapis.com/$discovery/rest?version=v1beta3
 
 common:
+  - type: VulnerabilityDisclosure
+    url: security/google-cloud-datastore-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/google-cloud-datastore-domain-security.yml
+  - type: Authentication
+    url: authentication/google-cloud-datastore-authentication.yml
   - type: OAuthScopes
     url: scopes/google-cloud-datastore-scopes.yml
   - type: GitHubOrganization
