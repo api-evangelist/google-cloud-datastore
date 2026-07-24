@@ -1,17 +1,25 @@
 openapi: 3.1.0
 info:
-  title: Cloud Datastore API
-  description: |
-    The Cloud Datastore API provides entity lookups, queries (including GQL),
+  title: Cloud Datastore Projects API
+  description: 'The Cloud Datastore API provides entity lookups, queries (including GQL),
+
     transactions, and project operations against datastore.googleapis.com. The
+
     service is also offered as Firestore in Datastore mode, which preserves
+
     this API surface while running on the Firestore storage layer.
+
+    '
   version: v1
 servers:
-  - url: https://datastore.googleapis.com
+- url: https://datastore.googleapis.com
 security:
-  - OAuth2: [cloud-platform]
-  - OAuth2: [datastore]
+- OAuth2:
+  - cloud-platform
+- OAuth2:
+  - datastore
+tags:
+- name: Projects
 paths:
   /v1/projects/{projectId}:allocateIds:
     post:
@@ -19,11 +27,11 @@ paths:
       description: Allocates IDs for the given keys, which is useful for referencing an entity before it is inserted.
       operationId: allocateIds
       parameters:
-        - name: projectId
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: projectId
+        in: path
+        required: true
+        schema:
+          type: string
       requestBody:
         required: true
         content:
@@ -49,16 +57,18 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/Key'
+      tags:
+      - Projects
   /v1/projects/{projectId}:beginTransaction:
     post:
       summary: Begin transaction
       operationId: beginTransaction
       parameters:
-        - name: projectId
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: projectId
+        in: path
+        required: true
+        schema:
+          type: string
       requestBody:
         required: true
         content:
@@ -80,17 +90,19 @@ paths:
                 properties:
                   transaction:
                     type: string
+      tags:
+      - Projects
   /v1/projects/{projectId}:commit:
     post:
       summary: Commit transaction
       description: Commits a transaction, optionally creating, deleting or modifying some entities.
       operationId: commit
       parameters:
-        - name: projectId
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: projectId
+        in: path
+        required: true
+        schema:
+          type: string
       requestBody:
         required: true
         content:
@@ -100,7 +112,10 @@ paths:
               properties:
                 mode:
                   type: string
-                  enum: [MODE_UNSPECIFIED, TRANSACTIONAL, NON_TRANSACTIONAL]
+                  enum:
+                  - MODE_UNSPECIFIED
+                  - TRANSACTIONAL
+                  - NON_TRANSACTIONAL
                 transaction:
                   type: string
                 mutations:
@@ -123,16 +138,18 @@ paths:
                       type: object
                   indexUpdates:
                     type: integer
+      tags:
+      - Projects
   /v1/projects/{projectId}:lookup:
     post:
       summary: Lookup entities
       operationId: lookup
       parameters:
-        - name: projectId
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: projectId
+        in: path
+        required: true
+        schema:
+          type: string
       requestBody:
         required: true
         content:
@@ -168,16 +185,18 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/Key'
+      tags:
+      - Projects
   /v1/projects/{projectId}:reserveIds:
     post:
       summary: Reserve IDs
       operationId: reserveIds
       parameters:
-        - name: projectId
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: projectId
+        in: path
+        required: true
+        schema:
+          type: string
       requestBody:
         required: true
         content:
@@ -194,16 +213,18 @@ paths:
       responses:
         '200':
           description: Empty
+      tags:
+      - Projects
   /v1/projects/{projectId}:rollback:
     post:
       summary: Rollback transaction
       operationId: rollback
       parameters:
-        - name: projectId
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: projectId
+        in: path
+        required: true
+        schema:
+          type: string
       requestBody:
         required: true
         content:
@@ -218,16 +239,18 @@ paths:
       responses:
         '200':
           description: Empty rollback response
+      tags:
+      - Projects
   /v1/projects/{projectId}:runQuery:
     post:
       summary: Run query
       operationId: runQuery
       parameters:
-        - name: projectId
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: projectId
+        in: path
+        required: true
+        schema:
+          type: string
       requestBody:
         required: true
         content:
@@ -257,16 +280,18 @@ paths:
                     type: object
                   query:
                     type: object
+      tags:
+      - Projects
   /v1/projects/{projectId}:runAggregationQuery:
     post:
       summary: Run aggregation query
       operationId: runAggregationQuery
       parameters:
-        - name: projectId
-          in: path
-          required: true
-          schema:
-            type: string
+      - name: projectId
+        in: path
+        required: true
+        schema:
+          type: string
       requestBody:
         required: true
         content:
@@ -280,28 +305,30 @@ paths:
             application/json:
               schema:
                 type: object
+      tags:
+      - Projects
   /v1/projects/{projectId}/operations:
     get:
       summary: List operations
       operationId: listOperations
       parameters:
-        - name: projectId
-          in: path
-          required: true
-          schema:
-            type: string
-        - name: filter
-          in: query
-          schema:
-            type: string
-        - name: pageSize
-          in: query
-          schema:
-            type: integer
-        - name: pageToken
-          in: query
-          schema:
-            type: string
+      - name: projectId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: filter
+        in: query
+        schema:
+          type: string
+      - name: pageSize
+        in: query
+        schema:
+          type: integer
+      - name: pageToken
+        in: query
+        schema:
+          type: string
       responses:
         '200':
           description: List of long-running operations
@@ -314,18 +341,23 @@ paths:
                     type: array
                     items:
                       type: object
+      tags:
+      - Projects
 components:
-  securitySchemes:
-    OAuth2:
-      type: oauth2
-      flows:
-        authorizationCode:
-          authorizationUrl: https://accounts.google.com/o/oauth2/v2/auth
-          tokenUrl: https://oauth2.googleapis.com/token
-          scopes:
-            cloud-platform: View and manage your data across Google Cloud Platform services
-            datastore: View and manage your Google Cloud Datastore data
   schemas:
+    Mutation:
+      type: object
+      properties:
+        insert:
+          $ref: '#/components/schemas/Entity'
+        update:
+          $ref: '#/components/schemas/Entity'
+        upsert:
+          $ref: '#/components/schemas/Entity'
+        delete:
+          $ref: '#/components/schemas/Key'
+        baseVersion:
+          type: string
     Key:
       type: object
       properties:
@@ -349,15 +381,6 @@ components:
                 type: string
               name:
                 type: string
-    Entity:
-      type: object
-      properties:
-        key:
-          $ref: '#/components/schemas/Key'
-        properties:
-          type: object
-          additionalProperties:
-            type: object
     EntityResult:
       type: object
       properties:
@@ -367,16 +390,22 @@ components:
           type: string
         cursor:
           type: string
-    Mutation:
+    Entity:
       type: object
       properties:
-        insert:
-          $ref: '#/components/schemas/Entity'
-        update:
-          $ref: '#/components/schemas/Entity'
-        upsert:
-          $ref: '#/components/schemas/Entity'
-        delete:
+        key:
           $ref: '#/components/schemas/Key'
-        baseVersion:
-          type: string
+        properties:
+          type: object
+          additionalProperties:
+            type: object
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://accounts.google.com/o/oauth2/v2/auth
+          tokenUrl: https://oauth2.googleapis.com/token
+          scopes:
+            cloud-platform: View and manage your data across Google Cloud Platform services
+            datastore: View and manage your Google Cloud Datastore data
