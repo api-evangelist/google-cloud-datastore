@@ -1,0 +1,14 @@
+{
+  "provider": "google-cloud-datastore",
+  "sources": [
+    "google-cloud-datastore-projects-api-openapi.yml"
+  ],
+  "outputs": [
+    "google-cloud-datastore-projects-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
