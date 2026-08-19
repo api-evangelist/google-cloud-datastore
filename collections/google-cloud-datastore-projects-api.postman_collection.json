@@ -1,0 +1,979 @@
+{
+  "item": [
+    {
+      "id": "03be0ae0-7775-4653-b6a7-32b5c41ad085",
+      "name": "Projects",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6d5d5103-3e11-444e-9e15-a87a56d44f42",
+          "name": "Allocate IDs",
+          "request": {
+            "name": "Allocate IDs",
+            "description": {
+              "content": "Allocates IDs for the given keys, which is useful for referencing an entity before it is inserted.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "projects",
+                "{{projectId}}:allocateIds"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"keys\": [\n    {\n      \"partitionId\": {\n        \"projectId\": \"<string>\",\n        \"namespaceId\": \"<string>\",\n        \"databaseId\": \"<string>\"\n      },\n      \"path\": [\n        {\n          \"kind\": \"<string>\",\n          \"id\": \"<string>\",\n          \"name\": \"<string>\"\n        },\n        {\n          \"kind\": \"<string>\",\n          \"id\": \"<string>\",\n          \"name\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"partitionId\": {\n        \"projectId\": \"<string>\",\n        \"namespaceId\": \"<string>\",\n        \"databaseId\": \"<string>\"\n      },\n      \"path\": [\n        {\n          \"kind\": \"<string>\",\n          \"id\": \"<string>\",\n          \"name\": \"<string>\"\n        },\n        {\n          \"kind\": \"<string>\",\n          \"id\": \"<string>\",\n          \"name\": \"<string>\"\n        }\n      ]\n    }\n  ],\n  \"databaseId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "83ba2d5b-eb43-4ea4-ab0a-7f6ee7cda2df",
+              "name": "Allocated keys",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "projects",
+                    "{{projectId}}:allocateIds"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"keys\": [\n    {\n      \"partitionId\": {\n        \"projectId\": \"string\",\n        \"namespaceId\": \"string\",\n        \"databaseId\": \"string\"\n      },\n      \"path\": [\n        {\n          \"kind\": \"string\",\n          \"id\": \"string\",\n          \"name\": \"string\"\n        },\n        {\n          \"kind\": \"string\",\n          \"id\": \"string\",\n          \"name\": \"string\"\n        }\n      ]\n    },\n    {\n      \"partitionId\": {\n        \"projectId\": \"string\",\n        \"namespaceId\": \"string\",\n        \"databaseId\": \"string\"\n      },\n      \"path\": [\n        {\n          \"kind\": \"string\",\n          \"id\": \"string\",\n          \"name\": \"string\"\n        },\n        {\n          \"kind\": \"string\",\n          \"id\": \"string\",\n          \"name\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"databaseId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"keys\": [\n    {\n      \"partitionId\": {\n        \"projectId\": \"string\",\n        \"namespaceId\": \"string\",\n        \"databaseId\": \"string\"\n      },\n      \"path\": [\n        {\n          \"kind\": \"string\",\n          \"id\": \"string\",\n          \"name\": \"string\"\n        },\n        {\n          \"kind\": \"string\",\n          \"id\": \"string\",\n          \"name\": \"string\"\n        }\n      ]\n    },\n    {\n      \"partitionId\": {\n        \"projectId\": \"string\",\n        \"namespaceId\": \"string\",\n        \"databaseId\": \"string\"\n      },\n      \"path\": [\n        {\n          \"kind\": \"string\",\n          \"id\": \"string\",\n          \"name\": \"string\"\n        },\n        {\n          \"kind\": \"string\",\n          \"id\": \"string\",\n          \"name\": \"string\"\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "154e9ce7-329f-4d12-9bb4-1123c7fde408",
+          "name": "Begin transaction",
+          "request": {
+            "name": "Begin transaction",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "projects",
+                "{{projectId}}:beginTransaction"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"transactionOptions\": \"<object>\",\n  \"databaseId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "8bfab9c4-8444-404c-9d81-77a0b49afc5d",
+              "name": "New transaction",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "projects",
+                    "{{projectId}}:beginTransaction"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"transactionOptions\": \"<object>\",\n  \"databaseId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"transaction\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b19fd32c-28cc-4177-9a08-95c68f4bba35",
+          "name": "Commit transaction",
+          "request": {
+            "name": "Commit transaction",
+            "description": {
+              "content": "Commits a transaction, optionally creating, deleting or modifying some entities.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v1",
+                "projects",
+                "{{projectId}}:commit"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mode\": \"<string>\",\n  \"transaction\": \"<string>\",\n  \"mutations\": [\n    {\n      \"insert\": {\n        \"key\": {\n          \"partitionId\": {\n            \"projectId\": \"<string>\",\n            \"namespaceId\": \"<string>\",\n            \"databaseId\": \"<string>\"\n          },\n          \"path\": [\n            {\n              \"kind\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"name\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            {\n              \"kind\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"name\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            }\n          ]\n        },\n        \"properties\": {\n          \"key_0\": \"<object>\",\n          \"key_1\": \"<object>\"\n        }\n      },\n      \"update\": {\n        \"key\": {\n          \"partitionId\": {\n            \"projectId\": \"<string>\",\n            \"namespaceId\": \"<string>\",\n            \"databaseId\": \"<string>\"\n          },\n          \"path\": [\n            {\n              \"kind\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"name\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            {\n              \"kind\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"name\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            }\n          ]\n        },\n        \"properties\": {\n          \"key_0\": \"<object>\",\n          \"key_1\": \"<object>\"\n        }\n      },\n      \"upsert\": {\n        \"key\": {\n          \"partitionId\": {\n            \"projectId\": \"<string>\",\n            \"namespaceId\": \"<string>\",\n            \"databaseId\": \"<string>\"\n          },\n          \"path\": [\n            {\n              \"kind\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"name\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            {\n              \"kind\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"name\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            }\n          ]\n        },\n        \"properties\": {\n          \"key_0\": \"<object>\",\n          \"key_1\": \"<object>\",\n          \"key_2\": \"<object>\"\n        }\n      },\n      \"delete\": {\n        \"partitionId\": {\n          \"projectId\": \"<string>\",\n          \"namespaceId\": \"<string>\",\n          \"databaseId\": \"<string>\"\n        },\n        \"path\": [\n          {\n            \"kind\": \"<string>\",\n            \"id\": \"<string>\",\n            \"name\": \"<string>\"\n          },\n          {\n            \"kind\": \"<string>\",\n            \"id\": \"<string>\",\n            \"name\": \"<string>\"\n          }\n        ]\n      },\n      \"baseVersion\": \"<string>\"\n    },\n    {\n      \"insert\": {\n        \"key\": {\n          \"partitionId\": {\n            \"projectId\": \"<string>\",\n            \"namespaceId\": \"<string>\",\n            \"databaseId\": \"<string>\"\n          },\n          \"path\": [\n            {\n              \"kind\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"name\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            {\n              \"kind\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"name\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            }\n          ]\n        },\n        \"properties\": {\n          \"key_0\": \"<object>\"\n        }\n      },\n      \"update\": {\n        \"key\": {\n          \"partitionId\": {\n            \"projectId\": \"<string>\",\n            \"namespaceId\": \"<string>\",\n            \"databaseId\": \"<string>\"\n          },\n          \"path\": [\n            {\n              \"kind\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"name\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            {\n              \"kind\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"name\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            }\n          ]\n        },\n        \"properties\": {\n          \"key_0\": \"<object>\",\n          \"key_1\": \"<object>\",\n          \"key_2\": \"<object>\"\n        }\n      },\n      \"upsert\": {\n        \"key\": {\n          \"partitionId\": {\n            \"projectId\": \"<string>\",\n            \"namespaceId\": \"<string>\",\n            \"databaseId\": \"<string>\"\n          },\n          \"path\": [\n            {\n              \"kind\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"name\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            {\n              \"kind\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"name\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            }\n          ]\n        },\n        \"properties\": {\n          \"key_0\": \"<object>\",\n          \"key_1\": \"<object>\",\n          \"key_2\": \"<object>\"\n        }\n      },\n      \"delete\": {\n        \"partitionId\": {\n          \"projectId\": \"<string>\",\n          \"namespaceId\": \"<string>\",\n          \"databaseId\": \"<string>\"\n        },\n        \"path\": [\n          {\n            \"kind\": \"<string>\",\n            \"id\": \"<string>\",\n            \"name\": \"<string>\"\n          },\n          {\n            \"kind\": \"<string>\",\n            \"id\": \"<string>\",\n            \"name\": \"<string>\"\n          }\n        ]\n      },\n      \"baseVersion\": \"<string>\"\n    }\n  ],\n  \"databaseId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "eaa6aeb2-7b8c-4bf8-8e03-a6193133934d",
+              "name": "Commit response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "projects",
+                    "{{projectId}}:commit"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"mode\": \"<string>\",\n  \"transaction\": \"<string>\",\n  \"mutations\": [\n    {\n      \"insert\": {\n        \"key\": {\n          \"partitionId\": {\n            \"projectId\": \"string\",\n            \"namespaceId\": \"string\",\n            \"databaseId\": \"string\"\n          },\n          \"path\": [\n            {\n              \"kind\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"name\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            {\n              \"kind\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"name\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            }\n          ]\n        },\n        \"properties\": {\n          \"key_0\": {},\n          \"key_1\": {}\n        }\n      },\n      \"update\": {\n        \"key\": {\n          \"partitionId\": {\n            \"projectId\": \"string\",\n            \"namespaceId\": \"string\",\n            \"databaseId\": \"string\"\n          },\n          \"path\": [\n            {\n              \"kind\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"name\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            {\n              \"kind\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"name\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            }\n          ]\n        },\n        \"properties\": {\n          \"key_0\": {}\n        }\n      },\n      \"upsert\": {\n        \"key\": {\n          \"partitionId\": {\n            \"projectId\": \"string\",\n            \"namespaceId\": \"string\",\n            \"databaseId\": \"string\"\n          },\n          \"path\": [\n            {\n              \"kind\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"name\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            {\n              \"kind\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"name\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            }\n          ]\n        },\n        \"properties\": {\n          \"key_0\": {},\n          \"key_1\": {}\n        }\n      },\n      \"delete\": {\n        \"partitionId\": {\n          \"projectId\": \"string\",\n          \"namespaceId\": \"string\",\n          \"databaseId\": \"string\"\n        },\n        \"path\": [\n          {\n            \"kind\": \"string\",\n            \"id\": \"string\",\n            \"name\": \"string\"\n          },\n          {\n            \"kind\": \"string\",\n            \"id\": \"string\",\n            \"name\": \"string\"\n          }\n        ]\n      },\n      \"baseVersion\": \"string\"\n    },\n    {\n      \"insert\": {\n        \"key\": {\n          \"partitionId\": {\n            \"projectId\": \"string\",\n            \"namespaceId\": \"string\",\n            \"databaseId\": \"string\"\n          },\n          \"path\": [\n            {\n              \"kind\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"name\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            {\n              \"kind\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"name\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            }\n          ]\n        },\n        \"properties\": {\n          \"key_0\": {}\n        }\n      },\n      \"update\": {\n        \"key\": {\n          \"partitionId\": {\n            \"projectId\": \"string\",\n            \"namespaceId\": \"string\",\n            \"databaseId\": \"string\"\n          },\n          \"path\": [\n            {\n              \"kind\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"name\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            {\n              \"kind\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"name\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            }\n          ]\n        },\n        \"properties\": {\n          \"key_0\": {},\n          \"key_1\": {}\n        }\n      },\n      \"upsert\": {\n        \"key\": {\n          \"partitionId\": {\n            \"projectId\": \"string\",\n            \"namespaceId\": \"string\",\n            \"databaseId\": \"string\"\n          },\n          \"path\": [\n            {\n              \"kind\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"name\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            {\n              \"kind\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"name\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            }\n          ]\n        },\n        \"properties\": {\n          \"key_0\": {},\n          \"key_1\": {},\n          \"key_2\": {}\n        }\n      },\n      \"delete\": {\n        \"partitionId\": {\n          \"projectId\": \"string\",\n          \"namespaceId\": \"string\",\n          \"databaseId\": \"string\"\n        },\n        \"path\": [\n          {\n            \"kind\": \"string\",\n            \"id\": \"string\",\n            \"name\": \"string\"\n          },\n          {\n            \"kind\": \"string\",\n            \"id\": \"string\",\n            \"name\": \"string\"\n          }\n        ]\n      },\n      \"baseVersion\": \"string\"\n    }\n  ],\n  \"databaseId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"indexUpdates\": 919\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "24094d00-ff60-4b45-8d90-c32fefd6216e",
+          "name": "Lookup entities",
+          "request": {
+            "name": "Lookup entities",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "projects",
+                "{{projectId}}:lookup"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"readOptions\": \"<object>\",\n  \"keys\": [\n    {\n      \"partitionId\": {\n        \"projectId\": \"<string>\",\n        \"namespaceId\": \"<string>\",\n        \"databaseId\": \"<string>\"\n      },\n      \"path\": [\n        {\n          \"kind\": \"<string>\",\n          \"id\": \"<string>\",\n          \"name\": \"<string>\"\n        },\n        {\n          \"kind\": \"<string>\",\n          \"id\": \"<string>\",\n          \"name\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"partitionId\": {\n        \"projectId\": \"<string>\",\n        \"namespaceId\": \"<string>\",\n        \"databaseId\": \"<string>\"\n      },\n      \"path\": [\n        {\n          \"kind\": \"<string>\",\n          \"id\": \"<string>\",\n          \"name\": \"<string>\"\n        },\n        {\n          \"kind\": \"<string>\",\n          \"id\": \"<string>\",\n          \"name\": \"<string>\"\n        }\n      ]\n    }\n  ],\n  \"databaseId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "930dc1c9-f3a5-46dd-812a-7aa1168c2bfb",
+              "name": "Lookup response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "projects",
+                    "{{projectId}}:lookup"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"readOptions\": \"<object>\",\n  \"keys\": [\n    {\n      \"partitionId\": {\n        \"projectId\": \"string\",\n        \"namespaceId\": \"string\",\n        \"databaseId\": \"string\"\n      },\n      \"path\": [\n        {\n          \"kind\": \"string\",\n          \"id\": \"string\",\n          \"name\": \"string\"\n        },\n        {\n          \"kind\": \"string\",\n          \"id\": \"string\",\n          \"name\": \"string\"\n        }\n      ]\n    },\n    {\n      \"partitionId\": {\n        \"projectId\": \"string\",\n        \"namespaceId\": \"string\",\n        \"databaseId\": \"string\"\n      },\n      \"path\": [\n        {\n          \"kind\": \"string\",\n          \"id\": \"string\",\n          \"name\": \"string\"\n        },\n        {\n          \"kind\": \"string\",\n          \"id\": \"string\",\n          \"name\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"databaseId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"found\": [\n    {\n      \"entity\": {\n        \"key\": {\n          \"partitionId\": {\n            \"projectId\": \"string\",\n            \"namespaceId\": \"string\",\n            \"databaseId\": \"string\"\n          },\n          \"path\": [\n            {\n              \"kind\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"name\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            {\n              \"kind\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"name\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            }\n          ]\n        },\n        \"properties\": {\n          \"key_0\": {}\n        }\n      },\n      \"version\": \"string\",\n      \"cursor\": \"string\"\n    },\n    {\n      \"entity\": {\n        \"key\": {\n          \"partitionId\": {\n            \"projectId\": \"string\",\n            \"namespaceId\": \"string\",\n            \"databaseId\": \"string\"\n          },\n          \"path\": [\n            {\n              \"kind\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"name\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            {\n              \"kind\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"name\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            }\n          ]\n        },\n        \"properties\": {\n          \"key_0\": {},\n          \"key_1\": {},\n          \"key_2\": {}\n        }\n      },\n      \"version\": \"string\",\n      \"cursor\": \"string\"\n    }\n  ],\n  \"missing\": [\n    {\n      \"entity\": {\n        \"key\": {\n          \"partitionId\": {\n            \"projectId\": \"string\",\n            \"namespaceId\": \"string\",\n            \"databaseId\": \"string\"\n          },\n          \"path\": [\n            {\n              \"kind\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"name\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            {\n              \"kind\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"name\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            }\n          ]\n        },\n        \"properties\": {\n          \"key_0\": {},\n          \"key_1\": {}\n        }\n      },\n      \"version\": \"string\",\n      \"cursor\": \"string\"\n    },\n    {\n      \"entity\": {\n        \"key\": {\n          \"partitionId\": {\n            \"projectId\": \"string\",\n            \"namespaceId\": \"string\",\n            \"databaseId\": \"string\"\n          },\n          \"path\": [\n            {\n              \"kind\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"name\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            },\n            {\n              \"kind\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"id\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              },\n              \"name\": {\n                \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n              }\n            }\n          ]\n        },\n        \"properties\": {\n          \"key_0\": {},\n          \"key_1\": {}\n        }\n      },\n      \"version\": \"string\",\n      \"cursor\": \"string\"\n    }\n  ],\n  \"deferred\": [\n    {\n      \"partitionId\": {\n        \"projectId\": \"string\",\n        \"namespaceId\": \"string\",\n        \"databaseId\": \"string\"\n      },\n      \"path\": [\n        {\n          \"kind\": \"string\",\n          \"id\": \"string\",\n          \"name\": \"string\"\n        },\n        {\n          \"kind\": \"string\",\n          \"id\": \"string\",\n          \"name\": \"string\"\n        }\n      ]\n    },\n    {\n      \"partitionId\": {\n        \"projectId\": \"string\",\n        \"namespaceId\": \"string\",\n        \"databaseId\": \"string\"\n      },\n      \"path\": [\n        {\n          \"kind\": \"string\",\n          \"id\": \"string\",\n          \"name\": \"string\"\n        },\n        {\n          \"kind\": \"string\",\n          \"id\": \"string\",\n          \"name\": \"string\"\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8e5b6c73-f697-409a-9f3e-36c5dd1c2126",
+          "name": "Reserve IDs",
+          "request": {
+            "name": "Reserve IDs",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "projects",
+                "{{projectId}}:reserveIds"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"keys\": [\n    {\n      \"partitionId\": {\n        \"projectId\": \"<string>\",\n        \"namespaceId\": \"<string>\",\n        \"databaseId\": \"<string>\"\n      },\n      \"path\": [\n        {\n          \"kind\": \"<string>\",\n          \"id\": \"<string>\",\n          \"name\": \"<string>\"\n        },\n        {\n          \"kind\": \"<string>\",\n          \"id\": \"<string>\",\n          \"name\": \"<string>\"\n        }\n      ]\n    },\n    {\n      \"partitionId\": {\n        \"projectId\": \"<string>\",\n        \"namespaceId\": \"<string>\",\n        \"databaseId\": \"<string>\"\n      },\n      \"path\": [\n        {\n          \"kind\": \"<string>\",\n          \"id\": \"<string>\",\n          \"name\": \"<string>\"\n        },\n        {\n          \"kind\": \"<string>\",\n          \"id\": \"<string>\",\n          \"name\": \"<string>\"\n        }\n      ]\n    }\n  ],\n  \"databaseId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "8d53f337-eacb-4a6c-b53a-c9aa123b475e",
+              "name": "Empty",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "projects",
+                    "{{projectId}}:reserveIds"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"keys\": [\n    {\n      \"partitionId\": {\n        \"projectId\": \"string\",\n        \"namespaceId\": \"string\",\n        \"databaseId\": \"string\"\n      },\n      \"path\": [\n        {\n          \"kind\": \"string\",\n          \"id\": \"string\",\n          \"name\": \"string\"\n        },\n        {\n          \"kind\": \"string\",\n          \"id\": \"string\",\n          \"name\": \"string\"\n        }\n      ]\n    },\n    {\n      \"partitionId\": {\n        \"projectId\": \"string\",\n        \"namespaceId\": \"string\",\n        \"databaseId\": \"string\"\n      },\n      \"path\": [\n        {\n          \"kind\": \"string\",\n          \"id\": \"string\",\n          \"name\": \"string\"\n        },\n        {\n          \"kind\": \"string\",\n          \"id\": \"string\",\n          \"name\": \"string\"\n        }\n      ]\n    }\n  ],\n  \"databaseId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d69a6a20-51f4-4ac9-be90-62010ea327a5",
+          "name": "Rollback transaction",
+          "request": {
+            "name": "Rollback transaction",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "projects",
+                "{{projectId}}:rollback"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"transaction\": \"<string>\",\n  \"databaseId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "27eab748-d169-48c6-9e7e-2e52f82c29ac",
+              "name": "Empty rollback response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "projects",
+                    "{{projectId}}:rollback"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"transaction\": \"<string>\",\n  \"databaseId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "80f80f72-05d7-420e-9767-5134dfac5bf3",
+          "name": "Run query",
+          "request": {
+            "name": "Run query",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "projects",
+                "{{projectId}}:runQuery"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"partitionId\": \"<object>\",\n  \"readOptions\": \"<object>\",\n  \"query\": \"<object>\",\n  \"gqlQuery\": \"<object>\",\n  \"databaseId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "e4d42d64-f63e-4b18-9042-ab421a59c768",
+              "name": "Query result",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "projects",
+                    "{{projectId}}:runQuery"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"partitionId\": \"<object>\",\n  \"readOptions\": \"<object>\",\n  \"query\": \"<object>\",\n  \"gqlQuery\": \"<object>\",\n  \"databaseId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"batch\": {},\n  \"query\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "70ebdbef-bf2a-41cc-9148-aaf848f53e8f",
+          "name": "Run aggregation query",
+          "request": {
+            "name": "Run aggregation query",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "projects",
+                "{{projectId}}:runAggregationQuery"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "45ee65a1-47fd-4ab9-96a0-c4b25183a455",
+              "name": "Aggregation query result",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "projects",
+                    "{{projectId}}:runAggregationQuery"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<object>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3112c3d1-eceb-4099-9431-4a785a76b308",
+          "name": "List operations",
+          "request": {
+            "name": "List operations",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "projects",
+                ":projectId",
+                "operations"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "filter",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "pageSize",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "pageToken",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "projectId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1ef44c02-01bc-429d-b1d2-c1d5c979b46f",
+              "name": "List of long-running operations",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "projects",
+                    ":projectId",
+                    "operations"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "filter",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "pageSize",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "pageToken",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "projectId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://datastore.googleapis.com",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "projectId"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "cloud-platform datastore"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://oauth2.googleapis.com/token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://accounts.google.com/o/oauth2/v2/auth"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "96ee639c-3ec0-4ef0-9c3b-45447d8bfd6b",
+    "name": "Cloud Datastore Projects API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Cloud Datastore API provides entity lookups, queries (including GQL),\ntransactions, and project operations against datastore.googleapis.com. The\nservice is also offered as Firestore in Datastore mode, which preserves\nthis API surface while running on the Firestore storage layer.\n",
+      "type": "text/plain"
+    }
+  }
+}
