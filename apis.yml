@@ -51,6 +51,13 @@ apis:
   - NoSQL
   - REST
   - Entities
+  - Query
+  - Transaction
+  - Authentication
+  tags_raw:
+  - NoSQL
+  - REST
+  - Entities
   - Queries
   - Transactions
   - OAuth 2.0
@@ -85,6 +92,8 @@ apis:
   humanURL: https://cloud.google.com/datastore/docs/reference/data/rest
   baseURL: https://datastore.googleapis.com
   tags:
+  - Project
+  tags_raw:
   - Projects
   properties:
   - type: OpenAPI
