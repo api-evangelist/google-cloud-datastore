@@ -1,7 +1,7 @@
 {
   "provider": "google-cloud-datastore",
   "sources": [
-    "google-cloud-datastore-projects-api-openapi.yml"
+    "_original/google-cloud-datastore-openapi.yml"
   ],
   "outputs": [
     "google-cloud-datastore-projects-api-openapi.yml"
@@ -9,6 +9,22 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "google-cloud-datastore-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "google-cloud-datastore-openapi.yml: tagged paths POST /v1/projects/{projectId}:allocateIds -> Projects",
+    "google-cloud-datastore-openapi.yml: tagged paths POST /v1/projects/{projectId}:beginTransaction -> Projects",
+    "google-cloud-datastore-openapi.yml: tagged paths POST /v1/projects/{projectId}:commit -> Projects",
+    "google-cloud-datastore-openapi.yml: tagged paths POST /v1/projects/{projectId}:lookup -> Projects",
+    "google-cloud-datastore-openapi.yml: tagged paths POST /v1/projects/{projectId}:reserveIds -> Projects",
+    "google-cloud-datastore-openapi.yml: tagged paths POST /v1/projects/{projectId}:rollback -> Projects",
+    "google-cloud-datastore-openapi.yml: tagged paths POST /v1/projects/{projectId}:runQuery -> Projects",
+    "google-cloud-datastore-openapi.yml: tagged paths POST /v1/projects/{projectId}:runAggregationQuery -> Projects",
+    "google-cloud-datastore-openapi.yml: tagged paths GET /v1/projects/{projectId}/operations -> Projects",
+    "google-cloud-datastore-openapi.yml: declared missing tag: Projects",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "google-cloud-datastore-projects-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
   title: Cloud Datastore Projects API
   description: 'The Cloud Datastore API provides entity lookups, queries (including GQL),
@@ -7,9 +7,7 @@ info:
 
     service is also offered as Firestore in Datastore mode, which preserves
 
-    this API surface while running on the Firestore storage layer.
-
-    '
+    this API surface while running on the Firestore storage layer.'
   version: v1
 servers:
 - url: https://datastore.googleapis.com
@@ -345,6 +343,15 @@ paths:
       - Projects
 components:
   schemas:
+    Entity:
+      type: object
+      properties:
+        key:
+          $ref: '#/components/schemas/Key'
+        properties:
+          type: object
+          additionalProperties:
+            type: object
     Mutation:
       type: object
       properties:
@@ -357,6 +364,15 @@ components:
         delete:
           $ref: '#/components/schemas/Key'
         baseVersion:
+          type: string
+    EntityResult:
+      type: object
+      properties:
+        entity:
+          $ref: '#/components/schemas/Entity'
+        version:
+          type: string
+        cursor:
           type: string
     Key:
       type: object
@@ -381,24 +397,6 @@ components:
                 type: string
               name:
                 type: string
-    EntityResult:
-      type: object
-      properties:
-        entity:
-          $ref: '#/components/schemas/Entity'
-        version:
-          type: string
-        cursor:
-          type: string
-    Entity:
-      type: object
-      properties:
-        key:
-          $ref: '#/components/schemas/Key'
-        properties:
-          type: object
-          additionalProperties:
-            type: object
   securitySchemes:
     OAuth2:
       type: oauth2
