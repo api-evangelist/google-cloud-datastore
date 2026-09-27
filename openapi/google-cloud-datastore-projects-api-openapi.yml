@@ -343,15 +343,6 @@ paths:
       - Projects
 components:
   schemas:
-    Entity:
-      type: object
-      properties:
-        key:
-          $ref: '#/components/schemas/Key'
-        properties:
-          type: object
-          additionalProperties:
-            type: object
     Mutation:
       type: object
       properties:
@@ -397,6 +388,15 @@ components:
                 type: string
               name:
                 type: string
+    Entity:
+      type: object
+      properties:
+        key:
+          $ref: '#/components/schemas/Key'
+        properties:
+          type: object
+          additionalProperties:
+            type: object
   securitySchemes:
     OAuth2:
       type: oauth2
