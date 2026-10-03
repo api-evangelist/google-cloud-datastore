@@ -343,6 +343,15 @@ paths:
       - Projects
 components:
   schemas:
+    Entity:
+      type: object
+      properties:
+        key:
+          $ref: '#/components/schemas/Key'
+        properties:
+          type: object
+          additionalProperties:
+            type: object
     Mutation:
       type: object
       properties:
@@ -355,15 +364,6 @@ components:
         delete:
           $ref: '#/components/schemas/Key'
         baseVersion:
-          type: string
-    EntityResult:
-      type: object
-      properties:
-        entity:
-          $ref: '#/components/schemas/Entity'
-        version:
-          type: string
-        cursor:
           type: string
     Key:
       type: object
@@ -388,15 +388,15 @@ components:
                 type: string
               name:
                 type: string
-    Entity:
+    EntityResult:
       type: object
       properties:
-        key:
-          $ref: '#/components/schemas/Key'
-        properties:
-          type: object
-          additionalProperties:
-            type: object
+        entity:
+          $ref: '#/components/schemas/Entity'
+        version:
+          type: string
+        cursor:
+          type: string
   securitySchemes:
     OAuth2:
       type: oauth2
