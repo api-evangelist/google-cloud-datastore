@@ -1,4 +1,4 @@
-# Google Cloud Datastore (google-cloud-datastore)
+# Google Cloud Datastore
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,86 +66,108 @@
 
 Google Cloud Datastore is a fully managed, schemaless, highly scalable NoSQL document database for web and mobile applications, originally based on Google's Bigtable / Megastore stack. The service has since been rebranded as Firestore in Datastore mode, which preserves the Datastore API and data model while running on Firestore's storage layer for strong consistency and higher throughput. The Cloud Datastore REST API provides entity lookups, queries (including GQL), transactions, and project operations against datastore.googleapis.com, authenticated with Google OAuth 2.0 / service-account credentials.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/google-cloud-datastore/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/google-cloud-datastore/refs/heads/main/apis.yml)
+**Areas:** NoSQL · Database · Document Database · Google Cloud · Firestore · Managed Service · Key-Value Store
 
-## Scope
+## Google Cloud Datastore on APIs.io
 
-- **Type:** Index
+Everything profiled for Google Cloud Datastore is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/google-cloud-datastore/](https://apis.io/providers/google-cloud-datastore/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (3)
 
-- NoSQL
-- Database
-- Document Database
-- Google Cloud
-- Firestore
-- Managed Service
-- Key-Value Store
+- [Cloud Datastore API v1](https://apis.io/apis/google-cloud-datastore/rest-api-v1/) — Stable REST API for Google Cloud Datastore / Firestore in Datastore mode. Provides entity lookup, commit, rollback, allocateIds, reserveIds, runQuery, and…
+- [Cloud Datastore API v1beta3](https://apis.io/apis/google-cloud-datastore/rest-api-v1beta3/) — Beta REST API for Cloud Datastore exposing the same surface as v1 with newer features. Discovery document available for tooling and code generation.
+- [Google Cloud Datastore Projects API](https://apis.io/apis/google-cloud-datastore/google-cloud-datastore-projects-api/) — The Projects API from Google Cloud Datastore — 9 operation(s) for projects.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-11
-- **Modified:** 2026-05-11
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Cloud Datastore API v1
+Which operations an agent can call, which act, and which need a human in the loop.
 
-Stable REST API for Google Cloud Datastore / Firestore in Datastore mode. Provides entity lookup, commit, rollback, allocateIds, reserveIds, runQuery, and runAggregationQuery operations against a Google Cloud project. Authentication uses Google OAuth 2.0 or service-account credentials with the datastore IAM scope.
+- [Google Cloud Datastore Agentic Access](https://apis.io/agentic-access/google-cloud-datastore/google-cloud-datastore-agentic-access/)
 
-- **Human URL:** [https://cloud.google.com/datastore/docs/reference/data/rest](https://cloud.google.com/datastore/docs/reference/data/rest)
-- **Base URL:** `https://datastore.googleapis.com`
+#### Collections (2)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- NoSQL
-- REST
-- Entities
-- Queries
-- Transactions
-- OAuth 2.0
+- [Cloud Datastore API](https://apis.io/collections/google-cloud-datastore/open-google-cloud-datastore/)
+- [Cloud Datastore Projects API](https://apis.io/collections/google-cloud-datastore/open-google-cloud-datastore-projects-api/)
 
-#### Properties
+#### Security (3)
 
-- [Documentation](https://cloud.google.com/datastore/docs/reference/data/rest)
-- [Discovery  Document](https://datastore.googleapis.com/$discovery/rest?version=v1)
-- [Authentication](https://cloud.google.com/docs/authentication)
-- [g R P C  Reference](https://cloud.google.com/datastore/docs/reference/data/rpc)
-- [Client  Libraries](https://cloud.google.com/datastore/docs/reference/libraries)
-- [Postman Collection](collections/google-cloud-datastore.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/google-cloud-datastore.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-### Cloud Datastore API v1beta3
+- [Google Cloud Datastore Authentication](https://apis.io/security/google-cloud-datastore/google-cloud-datastore-authentication/)
+- [Google Cloud Datastore Domain Security](https://apis.io/security/google-cloud-datastore/google-cloud-datastore-domain-security/)
+- [Google Cloud Datastore Vulnerability Disclosure](https://apis.io/security/google-cloud-datastore/google-cloud-datastore-vulnerability-disclosure/)
 
-Beta REST API for Cloud Datastore exposing the same surface as v1 with newer features. Discovery document available for tooling and code generation.
+#### OAuth scopes (1)
 
-- **Human URL:** [https://cloud.google.com/datastore/docs/reference/data/rest](https://cloud.google.com/datastore/docs/reference/data/rest)
-- **Base URL:** `https://datastore.googleapis.com`
+The permissions the API asks for.
 
-#### Tags
+- [Google Cloud Datastore Scopes](https://apis.io/scopes/google-cloud-datastore/google-cloud-datastore-scopes/)
 
-- NoSQL
-- REST
-- Beta
+## Where to find this API
 
-#### Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-- [Discovery  Document](https://datastore.googleapis.com/$discovery/rest?version=v1beta3)
-- [Postman Collection](collections/google-cloud-datastore.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/google-cloud-datastore.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [GitHub Organization](https://github.com/googleapis)
 - [Website](https://cloud.google.com/datastore)
 - [Documentation](https://cloud.google.com/datastore/docs)
 - [Pricing](https://cloud.google.com/datastore/pricing)
-- [Sign Up](https://console.cloud.google.com/freetrial)
-- [Console](https://console.cloud.google.com/datastore)
-- [Status Page](https://status.cloud.google.com)
-- [Firestore ( Successor)](https://cloud.google.com/firestore/docs/firestore-or-datastore)
+- [GitHub](https://github.com/googleapis)
+- [Status](https://status.cloud.google.com)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 31.0** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 42.9 |
+| Contract governance | 0.0 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 21.4 |
+| Access clarity | 23.7 |
+
+**Agent readiness 24.0** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | documented (partial credit) |
+| MCP Server | — |
+| Auth Clarity | negotiable (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | documented (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 27.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/google-cloud-datastore/](https://apis.io/providers/google-cloud-datastore/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Google Cloud Datastore: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/google-cloud-datastore/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
